@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { FloatingLabel, Form,Spinner } from 'react-bootstrap'
 import { Link, useNavigate,  } from 'react-router-dom'
-import { registerApi } from '../services/allApi'
-
+import { loginApi, registerApi } from '../services/allApi'
 
 const Auth = ({ insideRegister }) => {
   const [isLoading,setIsLoading]=useState(false)
@@ -48,13 +47,8 @@ if(userData.email && userData.password){
     if(result.status==200){
       sessionStorage.setItem("user",JSON.stringify(result.data.user))
       sessionStorage.setItem("token",result.data.token)
-      setISAuthorised(true)
-     setIsLoading(true)
-     setTimeout(()=>{
-      setuserData({username:"",email:"",password:""})
-      navigate('/')
-      setIsLoading(false)
-     },2000);
+setuserData({    username:"",email:"",password:""})
+navigate('/taskpage')
     }else{
       if(result.response.status==404){
         alert(result.response.data)
@@ -109,7 +103,8 @@ if(userData.email && userData.password){
                   :
                   <div className="mt-3">
                   <button onClick={handleLogin}  className='btn btn-warning mb-2 d-flex' >login
-                   {isLoading && <Spinner animation="border" variant="warning" />}</button>
+                   {/* {isLoading && <Spinner animation="border" variant="warning" />} */}
+                   </button>
                   <p >New user? Click here to <Link to={'/register'}>Register</Link></p>
                 </div>
                 }
