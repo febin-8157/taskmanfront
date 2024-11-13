@@ -1,15 +1,13 @@
 import commonApi from "./commonApi"
 import SERVERURL from "./serverUrl"
 
-// register
-export const registerApi= async (reqBody)=>{
-    return await commonApi("POST",`${SERVERURL}/register`,reqBody)
+// create
+export const CreateContactApi= async (reqBody)=>{
+    return await commonApi("POST",`${SERVERURL}/createcontact`,reqBody)
 }
 
-export const loginApi= async (reqBody)=>{
-    return await commonApi("POST",`${SERVERURL}/login`,reqBody)
-}
-
-export const addTaskApi  =async (reqBody)=>{
-    return await commonApi("POST",`${SERVERURL}/addtask`,reqBody)
+export const getContactApi  =async ()=>{
+    return await commonApi("GET",`${SERVERURL}/getcontact`,"")
    }
+
+   

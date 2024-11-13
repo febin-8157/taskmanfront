@@ -3,19 +3,19 @@ import { Link } from 'react-router-dom'
 const HomePage = () => {
   return (
     <>
-            <div style={{minHeight:'100vh'}} className='d-flex justify-center align-items-center rounded'>
-        <div className='container '>
+            <div style={{minHeight:'80vh'}} className='d-flex justify-center align-items-center rounded shadow border m-5'>
+        <div className='container p-5'>
       <div className='row align-items-center'>
     <div className='col-lg-6'>
-    <h1 style={{fontSize:'80px'}}>Task Manager</h1>
-    <p style={{textAlign:'justify'}}> A task management tool is used by an individual, team, or organization to complete projects efficiently by organizing and prioritizing related tasks. Task management tools come in many forms, like basic spreadsheets or online project management applications.</p>
+    <h1 style={{fontSize:'80px'}}>Contact Manager</h1>
+    <p style={{textAlign:'justify'}}> A contact management app is used  to manage your contacts.</p>
 
 
-<Link to={'/login'} className='btn btn-primary '>Start To Explore</Link>
+<Link to={'/contact'} className='btn btn-primary '>Start To Manage</Link>
 
    </div> 
     <div className='col-lg-6'>
-     <img className='fluid rounded' style={{width:'700px'}}  src="https://projectsly.com/images/task-management-system-screenshot-1.png?v=1691124479409199525" alt="" />
+     <img className='fluid rounded' style={{width:'500px',height:'330px'}}  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYzg6IB0Ez1dCrBhkqbxE3Iq_1J2PpQEh_nQ&s" alt="" />
      </div>
 
       </div>
